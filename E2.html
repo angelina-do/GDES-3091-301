@@ -20,7 +20,9 @@
             grid-template-rows: repeat(10, 1fr);
             grid-template-columns: repeat(10, 1fr);
         }
-
+        .white{
+            background: white;
+        }
         .lightmint{
             background:#C9DAD1;
         }
@@ -42,7 +44,9 @@
         .cream {
             background: #FFF9E7;
         }
-
+        .black{
+            background: black;
+        }
         .blue {
             background: #3A94C0;
         }
@@ -150,7 +154,95 @@
             grid-row: 8 / 11;
         }
 
-    
+        /*   
+        Pixel Pokeball CSS
+        */
+        .row-1{
+            grid-column: 6 / 10;
+            grid-row: 1 / 2;
+        }
+       
+        .row-2{
+            grid-column: 6 / 10;
+            grid-row: 2 / 3;
+        }
+        .row-3{
+            grid-column: 4 / 12;
+            grid-row: 3 / 4;
+        }
+        .row-4{
+            grid-column: 3 / 13;
+            grid-row: 4 / 5;
+        }
+        .row-5black{
+            grid-column: 7 / 9;
+            grid-row: 6 / 7;
+        }
+        .row-5{
+            grid-column: 3 / 13;
+            grid-row: 5 / 6;
+        }
+        .row-6black{
+            grid-column: 6 / 10;
+            grid-row: 7 / 8;
+        }
+        .row-6white{
+            grid-column: 6 / 10;
+            grid-row: 7 / 8;
+        }
+        .row-6{
+            grid-column: 2 / 14;
+            grid-row: 6 / 7;
+        }
+        .row-7white{
+            grid-column: 7 / 9;
+            grid-row: 7 / 8;
+        }
+        .row-7{
+            grid-column: 2 / 14;
+            grid-row: 7 / 8;
+        }
+        
+        .row-8{
+            grid-column: 7 / 9;
+            grid-row: 8 / 9;
+        }
+        .row-9black{
+            grid-column: 7 / 9;
+            grid-row: 9 / 10;
+        }
+        .row-9{
+            grid-column: 2 / 14;
+            grid-row: 9 / 10;
+        }
+        .row-9black{
+            grid-column: 7 / 9;
+            grid-row: 9 / 10;
+        }
+        .row-10{
+            grid-column: 3 / 13;
+            grid-row: 10 / 12;
+        }
+        .row-11{
+            grid-column: 4 / 12;
+            grid-row: 12 / 13;
+        }
+        .row-12{
+            grid-column: 5 / 11;
+            grid-row: 13 / 14;
+        }
+        .row-13{
+            grid-column: 6 / 10;
+            grid-row: 14 / 15;
+        }
+        .background{
+            grid-column: 1 / 16;
+            grid-row: 1 / 16;
+        }
+
+         /*   
+        Regular Pokeball CSS
+        */
 
         /* create white circle */
         .bottomPokeball {
@@ -278,12 +370,39 @@
        
     </div>
 <br>
+   <!-- 
+        Recreation of Pokeball 
+        https://www.pngkey.com/png/detail/35-356244_pokeball-pokeball-pixel-art.png   
+     -->
+
+    <h2>Painting 3</h2>
+    <div class="painting-1">
+        <div class="black background"></div>
+        <div class="red row-2"></div>
+        <div class="red row-3"></div>
+        <div class="red row-4"></div>
+        <div class="red row-5"></div>
+        <div class="red row-6"></div>
+        <div class="black row-5black"></div>
+        <div class="red row-7"></div>
+        <div class="white row-6white"></div>
+        <div class="black row-6black"></div>
+        <div class="white row-7white"></div>
+        <div class="white row-8"></div>
+        <div class="white row-9"></div>
+        <div class="black row-9black"></div>
+        <div class="white row-10"></div>
+        <div class="white row-11"></div>
+        <div class="white row-12"></div>
+        
+    </div>
+<br>
 
  <!-- 
         Recreation of Pokeball 
         https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3APok%25C3%25A9_Ball_icon.svg&psig=AOvVaw0A7CY1AXqOQ-iPgGRmgAai&ust=1694829904277000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIDqhcnDq4EDFQAAAAAdAAAAABAD
     -->
-<h2>Painting 3</h2>
+<h2>Painting 3.1</h2>
     <div class="bottomPokeball">
         <div class="topPokeball">
         <div class="blackCircle"></div>
@@ -291,6 +410,7 @@
     </div>
 
     <br>
+
     <div id="buttonPosition">
             <a href="index.html">
                 <button>Back</button>
