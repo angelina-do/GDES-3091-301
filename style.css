@@ -216,6 +216,12 @@
             transform: translate(-50%, -50%); /* place in center */
         }
 
+        #buttonPosition {
+            position: fixed;
+            bottom: -4px;
+            right: 10px;
+          }
+
         button {
             background-color: #78aeca;
             color: #fff;
@@ -236,5 +242,9 @@
         }
         
         h2 {
+            font-family: Avenir;
+        }
+
+        h3 {
             font-family: Avenir;
         }
