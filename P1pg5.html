@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>Mother Nature</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    
+    <style>
+        .page-1 {
+            display: grid;
+            width: 900px;
+            height: 600px;
+            grid-template-rows: repeat(15, 1fr);
+            grid-template-columns: repeat(25, 1fr);
+            background-image: linear-gradient(rgb(255, 102, 0), #006acd, rgb(9, 9, 70))
+        } 
+        .grey{
+            background: grey;
+        }
+        .darkgrat {
+            background: darkgray;
+        }
+
+        .yellow {
+            background: #ffea71;
+        }
+
+
+        .building1 {
+            grid-column: 1 / 5;
+            grid-row: 6 / 16;
+        }
+        .building1Windows1 {
+            grid-column: 2 / 4;
+            grid-row: 7 / 9;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+        .building1Windows2 {
+            grid-column: 2 / 4;
+            grid-row: 10 / 12;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building1Windows3 {
+            grid-column: 2 / 4;
+            grid-row: 13 / 15;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building1Top {
+            grid-column: 2 / 4;
+            grid-row: 5 / 6;
+        }
+
+        .building2 {
+            grid-column: 5 / 8;
+            grid-row: 3 / 16;
+        }
+
+        .building2Windows1 {
+            grid-column: 6 / 7;
+            grid-row: 4 / 9;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+        
+        .building2Windows2 {
+            grid-column: 6 / 7;
+            grid-row: 10 / 15;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building3 {
+            grid-column: 8 / 13;
+            grid-row: 7 / 16;
+        }
+        .building3Top {
+            grid-column: 9 / 12;
+            grid-row: 4 / 8;
+        }
+        .building3TopTier {
+            grid-column: 10 / 11;
+            grid-row: 2 / 4;
+        }
+
+        .building3Windows1 {
+            grid-column: 9 / 10;
+            grid-row: 8 / 9;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building3Windows2 {
+            grid-column: 11 / 12;
+            grid-row: 8 / 9;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+        
+        .building3Windows3 {
+            grid-column: 9 / 10;
+            grid-row: 10 / 11;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building3Windows4 {
+            grid-column: 11 / 12;
+            grid-row: 10 / 11;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building3Windows5 {
+            grid-column: 9 / 10;
+            grid-row: 12 / 13;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building3Windows6 {
+            grid-column: 11 / 12;
+            grid-row: 12 / 13;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building3Windows7 {
+            grid-column: 9 / 10;
+            grid-row: 14 / 15;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building3Windows8 {
+            grid-column: 11 / 12;
+            grid-row: 14 / 15;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building3Windows9 {
+            grid-column: 10 / 11;
+            grid-row: 5 / 7;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building4 {
+            grid-column: 13 / 16;
+            grid-row: 5 / 16;
+        }
+
+        .building4Windows1 {
+            grid-column: 14 / 15 ;
+            grid-row: 7 / 8;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+        
+        .building4Windows2 {
+            grid-column: 14 / 15 ;
+            grid-row: 9 / 11;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building4Windows3 {
+            grid-column: 14 / 15 ;
+            grid-row: 12 / 15;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+
+        .building5 {
+            grid-column: 16 / 19;
+            grid-row: 5 / 16;
+        }
+     .building5Top {
+            grid-column:  17;
+            grid-row: 2 / 6;
+            width: 0; 
+            height: 0; 
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 120px solid grey;
+        } 
+        .building5Windows1 {
+            grid-column: 17 ;
+            grid-row: 6 / 8;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+        
+        .building5Windows2 {
+            grid-column: 17;
+            grid-row: 9 / 11;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building5Windows3 {
+            grid-column: 17 ;
+            grid-row: 12 / 15;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+        .building6 {
+            grid-column: 19 / 26;
+            grid-row: 10 / 16;
+        }
+        .building6Top {
+            grid-column: 20 / 25;
+            grid-row:  9 / 10;
+        }
+        .building6TopTier {
+            grid-column: 21 / 24;
+            grid-row:  8 / 9;
+        }
+
+        .building6Windows1 {
+            grid-column: 20 / 22 ;
+            grid-row: 11 / 12;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+        .building6Windows2 {
+            grid-column: 23 / 25 ;
+            grid-row: 11 / 12;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .building6Windows3 {
+            grid-column: 20 / 22 ;
+            grid-row: 13 / 15;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+        .building6Windows4 {
+            grid-column: 23 / 25 ;
+            grid-row: 13 / 15;
+            box-shadow: 0px 0px 15px 5px #ffe51e;
+        }
+
+        .moon {
+            position: absolute;
+				top: 200px;
+				left: 750px;
+				width: 100px;
+				height: 100px;
+				background-color: transparent;
+				border-radius: 50%;
+				box-shadow: 25px 10px 0px 0px palegoldenrod;
+        }
+        #buttonPositionIndex {
+            position: fixed;
+            bottom: -4px;
+            right: 10px;
+          }
+        #buttonPositionNext {
+            position: fixed;
+            bottom: 200px;
+            left: 800px;
+          }
+        #buttonPositionBack {
+            position: fixed;
+            bottom: 200px;
+            left: 40px;
+          }
+
+
+          button {
+            background-color: #78aeca;
+            color: #fff;
+            font-size: 16px;
+            font-family: Avenir;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Add a smooth transition */
+        
+        }
+
+        button:hover {
+            background-color: #3f657e; /* Change the background color on hover */
+        }
+        
+        h1 {
+            font-family: Avenir;
+        }
+        
+        h2 {
+            font-family: Avenir;
+        }
+
+        h3 {
+            font-family: Avenir;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <h1>Page 5</h2>
+
+    <div class="page-1">
+        <div class="moon"></div>
+        
+        <div class="grey building1"></div>
+        <div class="yellow building1Windows1"></div>
+        <div class="yellow building1Windows2"></div>
+        <div class="yellow building1Windows3"></div>
+        <div class="grey building1Top"></div>
+        <div class="darkgrat building2"></div>
+        <div class="yellow building2Windows1"></div>
+        <div class="yellow building2Windows2"></div>
+        <div class="grey building3"></div>
+        <div class="grey building3Top"></div>
+        <div class="grey building3TopTier"></div>
+        <div class="yellow building3Windows1"></div>
+        <div class="yellow building3Windows2"></div>
+        <div class="yellow building3Windows3"></div>
+        <div class="yellow building3Windows4"></div>
+        <div class="yellow building3Windows5"></div>
+        <div class="yellow building3Windows6"></div>
+        <div class="yellow building3Windows7"></div>
+        <div class="yellow building3Windows8"></div>
+        <div class="yellow building3Windows9"></div>
+        <div class="darkgrat building4"></div>
+        <div class="yellow building4Windows1"></div>
+        <div class="yellow building4Windows2"></div>
+        <div class="yellow building4Windows3"></div>
+        <div class="grey building5"></div>
+        <div class="yellow building5Windows1"></div>
+        <div class="yellow building5Windows2"></div>
+        <div class="yellow building5Windows3"></div>
+        <div class="building5Top"></div>
+        <div class="building5TopWindows"></div>
+        <div class="darkgrat building6"></div>
+        <div class="darkgrat building6Top"></div>
+        <div class="darkgrat building6TopTier"></div>
+        <div class="yellow building6Windows1"></div>
+        <div class="yellow building6Windows2"></div>
+        <div class="yellow building6Windows3"></div>
+        <div class="yellow building6Windows4"></div>
+ 
+        
+    </div>
+    
+<br>
+<div id="buttonPositionNext">
+    <a href="P1pg6.html">
+        <button>Next</button>
+    </a>
+<div id="buttonPositionBack">
+     <a href="P1pg4.html">
+        <button>Back</button>
+     </a>
+</div>
+<div id="buttonPositionIndex">
+    <a href="index.html">
+        <button>Return To Index</button>
+    </a>
+</div>
+
+</body>
+
+
+</html>
+
+
