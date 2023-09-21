@@ -37,7 +37,7 @@ img {
     margin-bottom: 10px;
 }
 .process-template {
-    width: 40%; /* Set the width of the template to 60% of the viewport. */
+    width: 60%; /* Set the width of the template to 60% of the viewport. */
     margin: auto; /* Center align the template by adding auto margins to the left and right */
 }
 .title {
