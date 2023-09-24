@@ -33,6 +33,7 @@
         .building1 {
             grid-column: 1 / 5;
             grid-row: 6 / 16;
+            
         }
         .building1Windows1 {
             grid-column: 2 / 4;
@@ -277,6 +278,14 @@
         h3 {
             font-family: Avenir;
         }
+
+        @keyframes shake {
+    0% { background-color:red; transform: rotate(0deg); }
+    25% { background-color:black; transform: rotate(5deg); }
+    50% { background-color:red; transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { background-color:black; transform: rotate(0deg); }
+  }
         
 
     </style>
@@ -299,7 +308,7 @@
         <div class="grey building3Top"></div>
         <div class="grey building3TopTier"></div>
         <div class="white building3Windows1"></div>
-        <div class="black building3Windows2"></div>
+        <div class="white building3Windows2"></div>
         <div class="white building3Windows3"></div>
         <div class="white building3Windows4"></div>
         <div class="white building3Windows5"></div>

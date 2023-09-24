@@ -95,6 +95,7 @@
         .building3Windows2 {
             grid-column: 11 / 12;
             grid-row: 8 / 9;
+            animation: flicker 0.25s infinite;
             
         }
         
@@ -168,7 +169,7 @@
             grid-column: 16 / 19;
             grid-row: 5 / 16;
         }
-     .building5Top {
+        .building5Top {
             grid-column:  17;
             grid-row: 2 / 6;
             width: 0; 
@@ -283,6 +284,12 @@
             font-family: Avenir;
         }
         
+        @keyframes flicker {
+        0% { background-color: #ffea71; }
+        25% { background-color:rgb(57, 57, 57); }
+        50% { background-color: #ffea71; }
+        100% { background-color:rgb(57, 57, 57); }
+    }
 
     </style>
 </head>

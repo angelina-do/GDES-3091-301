@@ -47,6 +47,15 @@ img {
 .section {
     margin-bottom: 100px;
 }
+
+@keyframes shake {
+    0% { background-color:red; transform: rotate(0deg); }
+    25% { background-color:black; transform: rotate(5deg); }
+    50% { background-color:red; transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { background-color:black; transform: rotate(0deg); }
+  }
+  
 /* End of spacing and layout */
 #buttonPositionIndex {
     position: fixed;
