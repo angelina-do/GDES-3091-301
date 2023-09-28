@@ -72,11 +72,18 @@ a {
     padding-right: 29px;
 }
 
+.ol-nav{
+    font-size: 12px;
+    padding-right: 21px;
+    padding-bottom: 26px;
+
+}
+
 
 main {
     width: 100%;
     background: white;
-    border: 1px solid black;
+    border: 0px solid black;
     
 
 }
