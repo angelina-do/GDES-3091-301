@@ -109,7 +109,8 @@ main {
 
 .a-nos{
     font-size: 10px;
-    width: 136px
+    width: 136px;
+    padding-bottom: 31px;
 }
 
 .row1 {
