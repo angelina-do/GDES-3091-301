@@ -10,6 +10,10 @@ body {
     font-family: Avenir;
 }
 
+ol{
+    padding-left: 50px;
+    font-size: 18px;
+}
 /* Start of text sizes */
 h1 {
     font-size: 4em;
