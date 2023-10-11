@@ -38,18 +38,44 @@ main {
 
 }
 
-.row1 {
+/* .row1 {
     text-align: left;
     padding-left: 50px;
     padding-top: 50px;
     width: 700px;
+    transition: all .5s ease-in-out;
     
 }
 
 .row1:hover {
-    color: #B3FD71;
     
-}
+    color: #B3FD71;
+    text-decoration: underline;
+ 
+    
+} */
+.hover-underline-animation {
+    text-align: left;
+    padding-left: 50px;
+    width: 700px;
+    display: inline-block;
+    position: relative;
+    color:  #B3FD71;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    background-color: #B3FD71;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+  }
 
 .row2 {
     text-align: left;
@@ -69,9 +95,9 @@ main {
 
 .row4 {
    position: relative;
-   left: 1350px;
+   left: 1360px;
    width: 300px;
-   top: -120px;
+   top: -140px;
     
 }
 
@@ -101,6 +127,19 @@ main {
 
   }
 
+  .LearnMore:hover {
+    font-family: 'Gabarito', sans-serif;
+    position: absolute;
+    top: 60%;
+    left: 50px;
+    font-size: 20px;
+    justify-content: center;
+    padding: 20px 100px;
+    background-color: #7fe427;
+    text-decoration: underline;
+
+  }
+
   .BuyTix {
     font-family: 'Gabarito', sans-serif;
     position: absolute;
@@ -110,6 +149,19 @@ main {
     justify-content: center;
     padding: 20px 60px;
     background-color: #B3FD71;
+    text-decoration: underline;
+
+  }
+
+  .BuyTix:hover {
+    font-family: 'Gabarito', sans-serif;
+    position: absolute;
+    top: 80%;
+    right: 60px;
+    font-size: 20px;
+    justify-content: center;
+    padding: 20px 60px;
+    background-color: #7fe427;
     text-decoration: underline;
 
   }
