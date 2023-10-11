@@ -1,12 +1,14 @@
 
 body {
    font-family: 'Gabarito', sans-serif;
+   color: white;
 }
 
 
 h1 {
     font-family: 'Gabarito', sans-serif;
-    font-size: 80px;
+    font-size: 70px;
+    color: white;
 }
 
 h2 {
@@ -25,35 +27,21 @@ h4 {
 }
 
 
-main {
-    font-size: 50px;
-    color: white;
-    
-
-}
-
 
 .a-link{
     font-size: 20px;
 
 }
 
-/* .row1 {
+.row1 {
     text-align: left;
+    padding-top: 0px;
     padding-left: 50px;
-    padding-top: 50px;
     width: 700px;
-    transition: all .5s ease-in-out;
+
     
 }
 
-.row1:hover {
-    
-    color: #B3FD71;
-    text-decoration: underline;
- 
-    
-} */
 .hover-underline-animation {
     text-align: left;
     padding-left: 50px;
@@ -95,9 +83,9 @@ main {
 
 .row4 {
    position: relative;
-   left: 1360px;
+   left: 1370px;
    width: 300px;
-   top: -140px;
+   top: -270px;
     
 }
 
@@ -117,7 +105,7 @@ main {
   .LearnMore {
     font-family: 'Gabarito', sans-serif;
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50px;
     font-size: 20px;
     justify-content: center;
@@ -130,7 +118,7 @@ main {
   .LearnMore:hover {
     font-family: 'Gabarito', sans-serif;
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50px;
     font-size: 20px;
     justify-content: center;
@@ -143,7 +131,7 @@ main {
   .BuyTix {
     font-family: 'Gabarito', sans-serif;
     position: absolute;
-    top: 80%;
+    top: 70%;
     right: 60px;
     font-size: 20px;
     justify-content: center;
@@ -156,7 +144,7 @@ main {
   .BuyTix:hover {
     font-family: 'Gabarito', sans-serif;
     position: absolute;
-    top: 80%;
+    top: 70%;
     right: 60px;
     font-size: 20px;
     justify-content: center;
