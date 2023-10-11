@@ -1,0 +1,134 @@
+
+body {
+   font-family: 'Gabarito', sans-serif;
+}
+
+
+h1 {
+    font-family: 'Gabarito', sans-serif;
+    font-size: 80px;
+}
+
+h2 {
+    font-family: 'Gabarito', sans-serif;
+    font-size: 35px;
+}
+
+h3 {
+    font-family: 'Gabarito', sans-serif;
+    font-size: 30px;
+}
+
+h4 {
+    font-family: 'Gabarito', sans-serif;
+    font-size: 15px;
+}
+
+
+main {
+    font-size: 50px;
+    color: white;
+    
+
+}
+
+
+.a-link{
+    font-size: 20px;
+
+}
+
+.row1 {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 50px;
+    width: 700px;
+    
+}
+
+.row1:hover {
+    color: #B3FD71;
+    
+}
+
+.row2 {
+    text-align: left;
+    padding-left: 50px;
+    width: 1000px;
+    
+}
+
+.row3 {
+    text-align: left;
+    padding-left: 50px;
+    width: 1000px;
+    color: #B3FD71;
+    padding-bottom: 100px;
+    
+}
+
+.row4 {
+   position: relative;
+   left: 1350px;
+   width: 300px;
+   top: -120px;
+    
+}
+
+
+
+#video-container {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+
+  /* BUTTON */
+  .LearnMore {
+    font-family: 'Gabarito', sans-serif;
+    position: absolute;
+    top: 60%;
+    left: 50px;
+    font-size: 20px;
+    justify-content: center;
+    padding: 20px 100px;
+    background-color: #B3FD71;
+    text-decoration: underline;
+
+  }
+
+  .BuyTix {
+    font-family: 'Gabarito', sans-serif;
+    position: absolute;
+    top: 80%;
+    right: 60px;
+    font-size: 20px;
+    justify-content: center;
+    padding: 20px 60px;
+    background-color: #B3FD71;
+    text-decoration: underline;
+
+  }
+
+#buttonPosition {
+    position: fixed;
+    bottom: -4px;
+    right: 10px;
+  }
+
+button {
+    background-color: #78aeca;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Gabarito', sans-serif;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition */
+
+}
+
