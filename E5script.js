@@ -1,17 +1,21 @@
-  // Function to change the color of the container based on colour clicked
+// Interaction Container
   function plumBD() {
-    document.body.style.backgroundColor = "plum";
+    interactionContainer.style.backgroundColor = "plum";
   }
 
   function blueBD() {
-    document.body.style.backgroundColor = "lightblue";
+    interactionContainer.style.backgroundColor = "lightblue";
   }
 
   function greenBD() {
-    document.body.style.backgroundColor = "lightgreen";
+    interactionContainer.style.backgroundColor = "lightgreen";
   }
 
-// Function for repeating text
+  function whiteBD() {
+    interactionContainer.style.backgroundColor = "white";
+  }
+
+// Repeating Text Container
 const loopContainer = document.getElementById('loopContainer');
 
 // Define the text you want to repeat
@@ -28,7 +32,7 @@ for (let i = 0; i < repeatCount; i++) {
 }
 
 
-// Function for square colour conditions
+// Square Colour Change Container
 function changeSquareColor() {
     // Conditions here
     const randomColor = getRandomColor();
@@ -56,7 +60,7 @@ changeColorButton.addEventListener('click', changeSquareColor);
 const textContainer = document.getElementById('textContainer');
 let fontSize = 16; // Initial font size in pixels
 const maxFontSize = 48; // Maximum font size in pixels
-const duration = 10000; // Duration in milliseconds (10 seconds) for the font size increase
+const duration = 20000; // Duration in milliseconds (20 seconds) for the font size increase
 const updateInterval = 1000; // Update the font size every 1000 (1 second) milliseconds
 
 const fontSizeIncrement = (maxFontSize - fontSize) / (duration / updateInterval);
@@ -91,13 +95,17 @@ textForm.addEventListener('submit', function (event) {
 });
 
 
-// Print Message
-const consolePrint = 'Hello World'
+// Console Container
+const consolePrint = document.getElementById('consolePrint');
+const outputMessage = document.getElementById('outputMessage');
 
-document.getElementById('consolePrint').onclick = function() {
-  //print on console
-  console.log(consolePrint)
-};
+consolePrint.addEventListener('click', printConsoleMessage);
+
+function printConsoleMessage() {
+  const consoleMessage = 'This is a message from the console!';
+  console.log(consoleMessage); // Log the message to the console
+  outputMessage.textContent = consoleMessage; // Display the message in the HTML
+}
 
 
 
