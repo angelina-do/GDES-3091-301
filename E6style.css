@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: red;
+
+}
+
+div {
+    transition: all 0.5s;
+    transition-delay: all 0.5s;
+
+}
+ body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-size-adjust: justify;
+
+ } 
+
+ .sub{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    text-size-adjust: justify;
+ }
+
+ button {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: clamp(20px, 1.5vw, 20px);
+    padding: 10px;
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+    background: white;
+
+    &:hover {
+        background-color: rgb(26, 26, 26);
+        color: white;
+    }
+}
+
+#buttonPosition {
+    position: fixed;
+    bottom: -4px;
+    right: 10px;
+  }
+
+
+ 
