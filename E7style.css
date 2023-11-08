@@ -1,0 +1,107 @@
+/* STYLES FOR RESPONSIVE DEMO */
+
+@font-face {
+    font-family: "custom";
+    src: url(super_smash_4_1_by_pokemon_diamond-d7zxu6d.ttf)
+
+}
+
+body {
+    background-image: url(images/1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "custom";
+    color: white;
+}
+
+h1 {
+    /* Constraint text size between 48px and 100px */
+    font-size: clamp(48px, 15vw, 300px);
+}
+
+h2 {
+    /* Constraint text size between 48px and 100px */
+    font-size: clamp(48px, 15vw, 300px);
+    display: none;
+}
+
+img {
+    /* Hides image on desktop */
+    display: block;
+    content: url("images/kirby.gif")
+}
+
+/* Desktop First Approach for Responsiveness */
+
+@media (max-width: 1199px) {
+
+    body {
+        background-image: url(images/2.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    h2 {
+        display: block;
+    }
+
+
+    img {
+        content: url("images/pikachu.gif")
+    }
+}
+
+@media (max-width: 991px) {
+    body {
+
+        background-image: url(images/3.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+    }
+
+    h1 {
+        display: block;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    img {
+        display: block;
+        content: url("images/kirby.gif")
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        color: black;
+        background-image: url(images/4.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    h2 {
+        display: block;
+    }
+
+    img {
+        display: block;
+        content: url("images/pikachu.gif")
+    }
+}
