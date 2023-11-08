@@ -105,3 +105,24 @@ img {
         content: url("images/pikachu.gif")
     }
 }
+
+#buttonPosition {
+    position: fixed;
+    bottom: -4px;
+    right: 10px;
+  }
+
+button {
+    background-color: #78aeca;
+    color: #fff;
+    font-size: 16px;
+    font-family: Avenir;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition */
+
+}
+button:hover {
+    background-color: #3f657e; /* Change the background color on hover */
+}
