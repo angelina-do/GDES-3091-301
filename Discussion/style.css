@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+p {
+    text-align: center;
+    font-family: Avenir;
+}
+
+.bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.book {
+    width: 100px;
+    height: 350px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    writing-mode: vertical-rl;
+    font-family: Avenir;
+    border-radius: 10px;
+
+}
+
+.book:nth-child(odd) {
+    background-image: linear-gradient(90deg, rgb(127, 0, 0) 0%, rgb(200, 0, 0) 15%, rgb(200, 0, 0) 85%, rgb(127, 0, 0) 100%);
+}
+
+.book:nth-child(even) {
+    background-image: linear-gradient(90deg, rgb(127, 70, 0) 0%, rgb(200, 77, 0) 15%, rgb(200, 77, 0) 85%, rgb(127, 70, 0) 100%);
+}
+
+.book:hover {
+    transform: scale(1.1);
+}
+
+.rectangle {
+    width: 720px;
+    height: 60px;
+    background-color: rgb(124, 75, 37);
+    position: relative;
+    top: 420px;
+}
