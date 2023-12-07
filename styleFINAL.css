@@ -275,6 +275,8 @@ button:hover {
 }
 
 h1 {
+	padding-left: 100px;
+	padding-top: 100px;
 	font-family: "custom";
 	color: white;
 	letter-spacing: 0.5rem;
@@ -347,9 +349,3 @@ h3 {
 	}
 }
 
-span {
-    background: #78aeca;
-    color: white;
-    padding: 15px;
-    display: inline-block;
-  }
