@@ -1,47 +1,47 @@
+/* Font declaration */
 @font-face {
     font-family: "custom";
-    src: url(Bubble\ Mint.ttf)
-
+    src: url(Bubble\ Mint.ttf);
 }
 
-html{
-	height: 100%;
+/* Global styling */
+html {
+    height: 100%;
 }
 
-body{
-	height: 100%;
-	margin: 0px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    background: rgb(55,127,158);
-	background: linear-gradient(0deg, rgba(55,127,158,1) 0%, rgba(0,23,142,1) 100%);
-	overflow: hidden
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(55,127,158,1) 0%, rgba(0,23,142,1) 100%);
+    overflow: hidden;
 }
 
-.container{
-	width: 1000px;
-	height: 1000px;
+a {
+    font-size: large;
+}
+
+/* Container styling */
+.container {
+    width: 100px;
+    height: 1000px;
     min-width: 600px;
-	max-width: 800px;
-	max-height: 500px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+    max-width: 1000px;
+    max-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
-.row{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.rain{
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-
+/* Raindrop styling */
 .rain:nth-of-type(1){
 	--duration: 2.7s;
 	--delay: 1s;
@@ -111,6 +111,7 @@ body{
 	animation-fill-mode: backwards;
 }
 
+/* Animation keyframes for raindrops */
 @keyframes fall{
 	0%{
 		transform: translateY(-120vh);
@@ -127,6 +128,7 @@ body{
 	}
 }
 
+/* Styling for waves */
 .waves > div{
 	position: absolute;
 	top:0px;
@@ -148,6 +150,7 @@ body{
 	animation-timing-function: linear;
 }
 
+/* Animation keyframes for waves */
 @keyframes spread{
 	0%{
 		transform: scale(0);
@@ -164,7 +167,7 @@ body{
 	}
 }
 
-
+/* Styling for particles */
 .particles > div{
 	position: absolute;	
 	border-radius: 100%;
@@ -211,6 +214,7 @@ body{
 	animation-delay: calc(var(--delay) + 0.3s);
 }
 
+/* Animation keyframes for particles jumping left */
 @keyframes jumpLeft{
 	0%{
 		transform: translate(0,0) scale(0);
@@ -229,6 +233,7 @@ body{
 	}
 }
 
+/* Animation keyframes for particles jumping right */
 @keyframes jumpRight{
 	0%{
 		transform: translate(0,0) scale(0);
@@ -247,7 +252,7 @@ body{
 	}
 }
 
-
+/* Button styling */
 #buttonPosition {
 	position: fixed;
 	bottom: -4px;
@@ -274,78 +279,65 @@ button:hover {
 
 }
 
+/* Heading styling */
+h1, h2, h3 {
+    font-family: "custom";
+    color: white;
+}
+
 h1 {
-	padding-left: 100px;
-	padding-top: 100px;
-	font-family: "custom";
-	color: white;
-	letter-spacing: 0.5rem;
-	font-size: 50px;
-	z-index: 2; /* Set a higher z-index for the header container */
-
+    padding-left: 100px;
+    padding-top: 100px;
+    letter-spacing: 0.5rem;
+    font-size: 50px;
+    z-index: 2;
 }
 
-h2 {
-    font-family: "custom";
-	color: white;
-	letter-spacing: 0.3rem;
-}
-
-h3 {
-    font-family: "custom";
-	color: white;
-	letter-spacing: 0.2rem;
-}
-
-#buttonPositionIndex {
-	position: fixed;
-	bottom: -4px;
-	right: 10px;
-  }
-
+/* Centered element styling */
 .center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-  }
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-.zoom{
-	font-family: "custom";
-	color: white;
+/* Zoom effect styling */
+.zoom {
+    font-family: "custom";
+    color: white;
     transition: transform 1s;
 }
 
-.zoom:hover{
+.zoom:hover {
     transform: scale(1.5);
-	color: #5cdaf3;
+    color: #5cdaf3;
 }
 
+/* Animated blob styling */
 .animated-blob {
-	position: absolute;
-	border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
-	width: 200px;
-	height: 150px;
-	background-image: linear-gradient(0deg, rgb(107, 180, 211) 0%, rgb(8, 45, 230) 100%);
-	box-shadow: -10vmin 10vmin 0 rgba(255, 255, 255, 0.07);
-	animation: animateBlob 2s linear infinite alternate; /* Faster animation */
-	cursor: pointer; /* Add cursor style to indicate clickable */
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	text-align: center;
-	font-size: 14px;
-	text-decoration: none;
-	font-family: "custom";
-
+    position: absolute;
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    width: 200px;
+    height: 150px;
+    background-image: linear-gradient(0deg, rgb(107, 180, 211) 0%, rgb(8, 45, 230) 100%);
+    box-shadow: -10vmin 10vmin 0 rgba(255, 255, 255, 0.07);
+    animation: animateBlob 2s linear infinite alternate;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: "custom";
 }
 
+/* Animation keyframes for the blob */
 @keyframes animateBlob {
-	0% {
-		border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
-	}
-	100% {
-		border-radius: 40% 60%;
-	}
+    0% {
+        border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    }
+    100% {
+        border-radius: 40% 60%;
+    }
 }
-

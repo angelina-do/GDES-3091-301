@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index: A Collection of Works</title>
+	<link rel="icon" href="icon.png">
+    <style>
+        @font-face {
+    font-family: "custom";
+    src: url(Bubble\ Mint.ttf)
+
+}
+
+html{
+	height: 100%;
+}
+
+a{
+	font-size: large;
+}
+body{
+	height: 100%;
+	margin: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background: rgb(55,127,158);
+	background: linear-gradient(0deg, rgba(55,127,158,1) 0%, rgba(0,23,142,1) 100%);
+}
+
+.container{
+	width: 100vw;
+	height: 100vh;
+    min-width: 600px;
+	max-width: 1000px;
+	max-height: 500px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
+
+.row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rain{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.rain:nth-of-type(1){
+	--duration: 2.7s;
+	--delay: 1s;
+	transform: translate(10%, 10%) scale(0.9);
+}
+
+.rain:nth-of-type(2){
+	--duration: 2.1s;
+	--delay: 1.2s;
+	transform: translate(-20%, 40%) scale(1.3);
+}
+
+.rain:nth-of-type(3){
+	--duration: 2.3s;
+	--delay: 2s;
+	transform: translate(0%, 50%) scale(1.1);
+}
+
+.rain:nth-of-type(4){
+	--duration: 2s;
+	--delay: 4s;
+	transform: translate(0%, -10%) scale(1.2);
+}
+
+.rain:nth-of-type(5){
+	--duration: 2.5s;
+	--delay: 0s;
+	transform: translate(10%, 0%) scale(0.9);
+}
+
+.rain:nth-of-type(6){
+	--duration: 2s;
+	--delay: 2.7s;
+	transform: translate(-20%, 0%) scale(1);
+}
+
+.rain:nth-of-type(7){
+	--duration: 1.8s;
+	--delay: 1.3s;
+	transform: translate(20%, -40%) scale(1.2);
+}
+
+.rain:nth-of-type(8){
+	--duration: 2.2s;
+	--delay: 0s;
+	transform: translate(20%, 0%) scale(1);
+}
+
+.rain:nth-of-type(9){
+	--duration: 2s;
+	--delay: 0.5s;
+	transform: translate(0%, -10%) scale(1.3);
+}
+
+.drop{
+	background-color: white;
+	width: 3px;
+	height: 100px;
+	position: absolute;
+	top: calc(50% - 100px); 
+	left: calc(50% - 1.5px);
+	animation-name: fall;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+	animation-fill-mode: backwards;
+}
+
+@keyframes fall{
+	0%{
+		transform: translateY(-120vh);
+	}
+	45%{
+		transform: translateY(0%);
+		opacity: 1;
+	}
+	46%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+.waves > div{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border-radius: 50%;
+	border: solid white 3px;
+	animation-name: spread;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-fill-mode: backwards;
+}
+
+.waves > div:nth-child(2){
+	animation-delay: calc(var(--delay) + 0.3s);
+	animation-timing-function: linear;
+}
+
+@keyframes spread{
+	0%{
+		transform: scale(0);
+		opacity: 1;
+	}
+	40%{
+		transform: scale(0);
+		opacity: 1;
+	}
+
+	100%{
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+.particles > div{
+	position: absolute;	
+	border-radius: 100%;
+	background-color: white;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	animation-fill-mode: backwards;
+}
+
+.particles > div:nth-child(1){
+	width: 7px;
+	height: 7px;
+	top: 50%;
+	left: 50%;
+	animation-name: jumpLeft;
+}
+
+.particles > div:nth-child(2){
+	width: 5px;
+	height: 5px;
+	top: 30%;
+	left: 50%;
+	animation-name: jumpLeft;
+	animation-delay: calc(var(--delay) + 0.1s);
+}
+
+.particles > div:nth-child(3){
+	width: 3px;
+	height: 3px;
+	top: 20%;
+	left: 70%;
+	animation-name: jumpRight;
+	animation-delay: calc(var(--delay) + 0.15s);
+}
+
+.particles > div:nth-child(4){
+	width: 5px;
+	height: 5px;
+	top: 30%;
+	left: 50%;
+	animation-name: jumpRight;
+	animation-delay: calc(var(--delay) + 0.3s);
+}
+
+@keyframes jumpLeft{
+	0%{
+		transform: translate(0,0) scale(0);
+	}
+
+	45%{
+		transform: translate(0,0) scale(0);
+	}
+
+	60%{
+		transform: translate(-50px, -90px) scale(1);
+	}
+
+	100%{
+		transform: translate(-60px, 0px) scale(0.1);
+	}
+}
+
+@keyframes jumpRight{
+	0%{
+		transform: translate(0,0) scale(0);
+	}
+
+	45%{
+		transform: translate(0,0) scale(0);
+	}
+
+	60%{
+		transform: translate(30px, -80px) scale(1);
+	}
+
+	100%{
+		transform: translate(50px, 0px) scale(0.1);
+	}
+}
+
+
+#buttonPosition {
+	position: fixed;
+	bottom: -4px;
+	right: 10px;
+  }
+
+button {
+	background-color: #78aeca;
+	color: #fff;
+	font-size: 16px;
+	font-family: Avenir;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease; /* Add a smooth transition */
+
+}
+
+button:hover {
+	background-color: #f3d05c; /* Change the background color on hover */
+	transition: background-color 0.3s ease; /* Add a smooth transition */
+	border-radius: 10px;
+	
+
+}
+
+h1 {
+	padding-left: 100px;
+	padding-top: 100px;
+	font-family: "custom";
+	color: white;
+	letter-spacing: 0.5rem;
+	font-size: 50px;
+	z-index: 2; /* Set a higher z-index for the header container */
+
+}
+
+h2 {
+    font-family: "custom";
+	color: white;
+	letter-spacing: 0.3rem;
+}
+
+h3 {
+    font-family: "custom";
+	color: white;
+	letter-spacing: 0.2rem;
+}
+
+#buttonPositionIndex {
+	position: fixed;
+	bottom: -4px;
+	right: 10px;
+  }
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
+.zoom{
+	font-family: "custom";
+	color: white;
+    transition: transform 1s;
+}
+
+.zoom:hover{
+    transform: scale(1.5);
+	color: #5cdaf3;
+}
+
+.animated-blob {
+	position: absolute;
+	border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+	width: 200px;
+	height: 150px;
+	background-image: linear-gradient(0deg, rgb(107, 180, 211) 0%, rgb(8, 45, 230) 100%);
+	box-shadow: -10vmin 10vmin 0 rgba(255, 255, 255, 0.07);
+	animation: animateBlob 2s linear infinite alternate; /* Faster animation */
+	cursor: pointer; /* Add cursor style to indicate clickable */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: none;
+	font-family: "custom";
+
+}
+
+@keyframes animateBlob {
+	0% {
+		border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+	}
+	100% {
+		border-radius: 40% 60%;
+	}
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1 class="zoom">Index: A Collection of Works</h1>
+    </div>
+    <div class="container2" id="blob-container"></div>
+	
+</div>
+    <div class="container">
+
+	<div class="rain">
+
+		<div class="drop"></div>
+		<div class="waves">
+
+			<div></div>
+			<div></div>
+		</div>
+		<div class="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+	</div>
+
+	<div class="rain">
+		<div class="drop"></div>
+		<div class="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="rain">
+		<div class="drop"></div>
+		<div class="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="splash"></div>
+		<div class="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="rain">
+		<div class="drop"></div>
+		<div class="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="rain">
+		<div class="drop"></div>
+		<div class="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="rain">
+		<div class="drop"></div>
+		<div class="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="rain">
+		<div class="drop"></div>
+		<div class="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="rain">
+		<div class="drop"></div>
+		<div class="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="rain">
+		<div class="drop"></div>
+		<div class="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+	</div>
+    
+    <script>
+        function getRandomPosition(existingPositions) {
+            const maxWidth = window.innerWidth - 250; // Adjusted to full viewport width
+            const maxHeight = window.innerHeight - 250;
+    
+            let attempts = 0;
+            while (attempts < 50) {
+                const randomX = Math.floor(Math.random() * maxWidth);
+                const randomY = Math.floor(Math.random() * maxHeight);
+    
+                const isCollision = existingPositions.some(position => {
+                    const distance = Math.hypot(randomX - position.left, randomY - position.top);
+                    return distance < 250;
+                });
+    
+                if (!isCollision) {
+                    return { left: randomX, top: randomY };
+                }
+    
+                attempts++;
+            }
+    
+            return { left: maxWidth / 2, top: maxHeight / 2 };
+        }
+    
+        function createBlob(existingPositions, link, textContent) {
+            const blobContainer = document.getElementById('blob-container');
+            const blob = document.createElement('a');
+            const position = getRandomPosition(existingPositions);
+    
+            blob.href = link || 'https://www.example.com';
+            blob.classList.add('animated-blob');
+            blob.style.left = position.left + 'px';
+            blob.style.top = position.top + 'px';
+    
+            blob.addEventListener('click', (event) => {
+                window.location.href = blob.href;
+            });
+    
+            blob.textContent = textContent || 'Click Me!';
+    
+            // Check for collision with h1 text
+            const h1Rect = document.querySelector('h1').getBoundingClientRect();
+            const blobRect = blob.getBoundingClientRect();
+    
+            if (
+                blobRect.left < h1Rect.right &&
+                blobRect.right > h1Rect.left &&
+                blobRect.top < h1Rect.bottom &&
+                blobRect.bottom > h1Rect.top
+            ) {
+                // If there is a collision, reposition the blob
+                createBlob(existingPositions, link, textContent);
+            } else {
+                blobContainer.appendChild(blob);
+                existingPositions.push(position);
+            }
+        }
+    
+        const existingPositions = [];
+    
+        createBlob(existingPositions, 'E2.html', 'E2: Grid');
+        createBlob(existingPositions, 'E3.html', 'E3: Fonts & Animation');
+        createBlob(existingPositions, 'E4.html', 'E4: Flexbox');
+        createBlob(existingPositions, 'E5.html', 'E5: Javascript');
+        createBlob(existingPositions, 'E6.html', 'E6: jQuery');
+        createBlob(existingPositions, 'E7.html', 'E7: Responsiveness');
+        createBlob(existingPositions, 'E8.html', 'E8: JSON');
+        createBlob(existingPositions, 'P1pg1.html', 'P1: Storybook');
+        createBlob(existingPositions, 'process-template.html', 'P1: Process Work');
+        createBlob(existingPositions, 'P2.html', 'P2: Poster');
+        createBlob(existingPositions, 'process-templateP2.html', 'P2: Process Work');
+        createBlob(existingPositions, 'P3.html', 'P3: Interaction');
+        createBlob(existingPositions, 'process-templateP3.html', 'P3: Process Work');
+        createBlob(existingPositions, 'R5.html', 'R5: My Website Is A Shifting House Next To A River Of Knowledge');
+        createBlob(existingPositions, 'process-templateIndex.html', 'Index: Process Work');
+    </script>
+    
+</body>
+</html>
