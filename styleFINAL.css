@@ -290,7 +290,7 @@ h1 {
     padding-top: 100px;
     letter-spacing: 0.5rem;
     font-size: 50px;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Centered element styling */

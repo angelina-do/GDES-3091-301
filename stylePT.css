@@ -19,6 +19,11 @@
      font-size: 2em;
  }
 
+ ol {
+    padding-left: 50px;
+    font-size: 2em;
+}
+
  /* Start of text sizes */
  h1 {
      font-size: 4em;
