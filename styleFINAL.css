@@ -330,6 +330,8 @@ h1 {
     font-size: 14px;
     text-decoration: none;
     font-family: "custom";
+	z-index: 2;
+
 }
 
 /* Animation keyframes for the blob */
